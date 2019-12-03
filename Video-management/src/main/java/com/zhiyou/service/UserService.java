@@ -10,4 +10,6 @@ public interface UserService {
 	void update(User user);
 
 	User selectByAccounts(String account, HttpServletRequest req, String password);
+
+	boolean selectByAccounts(String account);
 }

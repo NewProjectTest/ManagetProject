@@ -19,9 +19,9 @@
 
 <!--<base href="http://localhost:8080/Voids/">-->
 <base href=".">
-<link rel="stylesheet" href="../../z/base.css">
-<link rel="stylesheet" href="../../z/profile.css">
-<link rel="icon" href="http://localhost:8080/Voids/static/z/favicon.png"
+<link rel="stylesheet" href="z/base.css">
+<link rel="stylesheet" href="z/profile.css">
+<link rel="icon" href="z/favicon.png"
 	type="image/png">
 <title>在线公开课-智游教育|java|大数据|HTML5|python|UI|PHP视频教程</title>
 </head>
@@ -31,7 +31,7 @@
 
 	<header>
 		<div class="container top_bar clearfix">
-			<img src="./各人 中心_files/logo.png" alt="智游">
+			<img src="z/logo.png" alt="智游">
 			<div id="tele">
 				<span>4006-371-555</span> <span>0371-88888598</span>
 			</div>
@@ -39,58 +39,45 @@
 		<menu>
 			<div class="container clearfix">
 				<ul class="clearfix f_left">
-					<li>首页</a></li>
+					<li><a href="HomePageShow">首页</a></li>
 
-					<li class="menu_active">个人中心</a></li>
+					<li class="menu_active"><a>个人中心</a></li>
 				</ul>
 
 				<div id="user_bar">
-					<a> <img id="avatar" src="./各人 中心_files/avatar_lg.png" alt=""
-						width="30px;">
+					<a> <img id="avatar" src="z/avatar_lg.png" alt="" width="30px;">
 
-
-
-
-					</a> <a id="lay_out">退出</a>
+					</a> <a  href="ExitHomePageShow">退出</a>
 				</div>
 			</div>
 		</menu>
 	</header>
 
-	<main>
+
 	<div class="container">
 		<h2>我的资料</h2>
 		<div id="profile_tab">
 			<ul class="profile_tab_header f_left clearfix">
-				<li>更改资料</a></li>
+				<li><a  href="UpdateUserPage">更改资料</a></li>
 				<li class="profile_tab_line">|</li>
-				<li>更改头像</a></li>
+				<li><a href="UpdateUserPhotoShow">更改头像</a></li>
 				<li class="profile_tab_line">|</li>
-				<li>密码安全</a></li>
+				<li><a>密码安全</a></li>
 			</ul>
 			<div class="proflle_tab_body">
 
 				<div class="proflle_tab_workplace clearfix">
 					<div class="profile_avatar_area">
 
-						<img id="avatar" width="200px;" src="http://localhost:8080/Voids/"
-							alt="">
-
-
+						<img id="avatar" width="200px;" src="${list.imgurl }" alt="">
 						<p>欢迎回来！</p>
 					</div>
 					<ul class="profile_ifo_area">
-						<li><span class="dd">昵 称：</span></li>
-
-
-
-
-
-						<li><span class="dd">性 别：</span></li>
-						<li><span class="dd">生 日：</span></li>
-						<li><span class="dd">邮 箱：</span>1@qq.com</li>
-						<li><span class="dd">所在地：</span></li>
-
+						<li><span class="dd">昵 称：</span><input type="text" name="nickname" readonly="readonly" value="${list.nickname }"></li>
+						<li><span class="dd">性 别：</span><input type="text" name="sex" readonly="readonly" value="${list.sex }"></li>
+						<li><span class="dd">生 日：</span><input type="text" name="birthday" readonly="readonly" value="${list.birthday }"></li>
+						<li><span class="dd">邮 箱：</span><input type="text" name="accounts" readonly="readonly" value="${list.accounts }"></li>
+						<li><span class="dd">所在地：</span><input type="text" name="address" readonly="readonly" value="${list.address }"></li>
 					</ul>
 				</div>
 			</div>
@@ -100,10 +87,10 @@
 	<footer>
 		<div class="container">
 			<ul>
-				<li><img src="./各人 中心_files/footer_logo.png" alt=""
+				<li><img src="z/footer_logo.png" alt=""
 					id="foot_logo"></li>
 				<li>版权所有：智游3G教育 ©&nbsp;www.zhiyou100.com</li>
-				<li><img src="./各人 中心_files/a.png" alt="" id="wxgzh"></li>
+				<li><img src="z/a.png" alt="" id="wxgzh"></li>
 			</ul>
 		</div>
 	</footer>

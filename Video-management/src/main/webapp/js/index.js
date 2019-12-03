@@ -115,7 +115,7 @@ $("#regEmail").blur(function(){
     if(null != emailVal && ""!=emailVal){
         var params={"email":emailVal};
        // alert(params);
-        $.post("front/user/validateEmail.action",params,function(data){
+        $.post("validateEmail",params,function(data){
             if(data=="success"){
                regIsCommitEmail=true;
                $("#emailMsg").text("该邮箱可用").css("color","green");
@@ -155,13 +155,25 @@ $("#regPswAgain").blur(function(){
 
 });*/
 
+function outLogin(){
+        $.post("exit",null,function(data){
+                 if(data=='success'){
+                      document.location.reload();
+                   }
+        });
+        return false;
+}
+
+
+
+
 var regIsCommitEmail=false;
 var regIsCommitPsw=false;
 var verifyCode;
 function commitRegForm(){
      
      var code =$("input[name='yzm']").val();
-     //alert(code);
+     alert(code);
      //alert(regIsCommitEmail+","+regIsCommitPsw);
          if(regIsCommitEmail && regIsCommitPsw && verifyCode.validate(code)){
               //用js提交表单
@@ -169,7 +181,7 @@ function commitRegForm(){
              
              $.ajax({
               
-                url:"front/user/insertUser.action",
+                url:"insertUser",
                 data:$("#regForm").serialize(),
                 type:"POST",
                 success:function(data){
@@ -200,6 +212,7 @@ function commitRegForm(){
 }
 
 verifyCode = new GVerify("v_container");
+
 
 function commitLogin(){
    
