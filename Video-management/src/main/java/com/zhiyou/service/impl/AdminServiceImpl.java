@@ -18,9 +18,9 @@ public class AdminServiceImpl implements AdminService {
 	@Autowired
 	AdminMapper mapper;
 
-	public Integer login(String accounts, String password, HttpServletRequest req) {
+	public Integer adminLogin(String accounts, String password, HttpServletRequest req) {
 
-		Admin admin = mapper.login(accounts);
+		Admin admin = mapper.adminLogin(accounts);
 		if (admin != null) {
 
 			if (admin.getPassword().equals(password)) {

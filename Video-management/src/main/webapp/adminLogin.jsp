@@ -19,7 +19,7 @@
 </head>
 <body>
 	<div id="div1">
-		<form action="login">
+		<form action="adminLogin">
 			账号:<input type="text" name="accounts"> 
 			密码:<input type="password" name="password">
 			<input type="submit" value="登录"><br>

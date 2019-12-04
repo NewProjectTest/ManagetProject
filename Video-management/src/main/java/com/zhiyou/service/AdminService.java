@@ -8,7 +8,7 @@ import com.zhiyou.model.Speaker;
 
 public interface AdminService {
 
-	Integer login(String accounts, String password, HttpServletRequest req);
+	Integer adminLogin(String accounts, String password, HttpServletRequest req);
 
 	List<Speaker> videoShow();
 

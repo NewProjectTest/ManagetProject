@@ -7,7 +7,7 @@ import com.zhiyou.model.Speaker;
 
 public interface AdminMapper {
 
-	Admin login(String accounts);
+	Admin adminLogin(String accounts);
 
 	List<Speaker> videShow();
 

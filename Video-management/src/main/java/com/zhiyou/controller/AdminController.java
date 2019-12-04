@@ -17,15 +17,14 @@ public class AdminController {
 	@Autowired
 	AdminService service;
 
-	@RequestMapping(value = "login")
-	public ModelAndView login(String accounts, String password, HttpServletRequest req, HttpServletResponse resp) {
-		Integer num = service.login(accounts, password, req);
+	@RequestMapping(value = "adminLogin")
+	public ModelAndView adminLogin(String accounts, String password, HttpServletRequest req, HttpServletResponse resp) {
+		Integer num = service.adminLogin(accounts, password, req);
 		ModelAndView model = new ModelAndView();
 		if (num == 1) {
 
 			model.setViewName("forward:show");
 
-			model.setViewName("backstage/show");
 
 		} else if (num == 2) {
 			model.addObject("msg", "密码错误");
@@ -43,7 +42,7 @@ public class AdminController {
 		// List<Speaker> list = service.videoShow();
 		ModelAndView model = new ModelAndView();
 		model.addObject("list", service.videoShow());
-		model.setViewName("speaker/speakerShow");
+		model.setViewName("backstage/speaker/speakerShow");
 		return model;
 	}
 

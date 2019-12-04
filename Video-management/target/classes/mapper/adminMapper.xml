@@ -31,7 +31,7 @@
  	<delete id="DeleteSpeaker" >
  		DELETE FROM speaker WHERE id = #{id};
  	</delete>
-	<select id="login" resultType="admin">
+	<select id="adminLogin" resultType="admin">
 		select * from admin where accounts = #{accounts};
 	</select>
 	

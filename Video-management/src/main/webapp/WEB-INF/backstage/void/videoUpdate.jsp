@@ -7,6 +7,8 @@
 <title>Insert title here</title>
 </head>
 <body>
-
+	<div>
+		<input name="image_file" id="image_file" onchange="fileSelectHandler()" type="file">
+	</div>
 </body>
 </html>
