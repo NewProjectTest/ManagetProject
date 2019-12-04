@@ -11,6 +11,16 @@ public interface AdminMapper {
 
 	List<Speaker> videShow();
 
+	List<Speaker> speakerShow(Integer page);
+
 	Speaker SpeakerSelectById(Integer id);
+
+	Integer updateSpeaker(Speaker speaker);
+
+	void AddSpeaker(Speaker speaker);
+
+	void DeleteSpeaker(Integer id);
+
+	int count();
 
 }

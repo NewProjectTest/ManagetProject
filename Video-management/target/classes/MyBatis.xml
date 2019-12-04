@@ -9,6 +9,9 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
 		<typeAlias type="com.zhiyou.model.Admin" alias="admin"/>
 		<typeAlias type="com.zhiyou.model.Speaker" alias="speaker"/>
 		<typeAlias type="com.zhiyou.model.User" alias="user"/>
+		<typeAlias type="com.zhiyou.model.Course" alias="course"/>
+		<typeAlias type="com.zhiyou.model.Subject" alias="subject"/>
+		<typeAlias type="com.zhiyou.model.Video" alias="video"/>
 	</typeAliases>
 
 </configuration>
