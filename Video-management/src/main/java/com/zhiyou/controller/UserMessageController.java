@@ -22,8 +22,7 @@ public class UserMessageController {
 
 	@RequestMapping(value = "UpdateUserPasswordShow")
 	public String UpdateUserPasswordShow(HttpServletRequest req, HttpServletResponse resp) {
-		System.out.println(123);
-		System.out.println("张");
+
 		return "frontDesk/XiuGaiMiMa";
 	}
 

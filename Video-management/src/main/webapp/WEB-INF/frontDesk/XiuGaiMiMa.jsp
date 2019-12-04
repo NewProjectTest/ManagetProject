@@ -28,9 +28,6 @@
 
 <body class="w100">
 
-
-
-
 	<header>
 		<div class="container top_bar clearfix">
 			<img src="z/logo.png" alt="智游">
@@ -48,10 +45,6 @@
 
 				<div id="user_bar">
 					<a> <img id="avatar" src="z/avatar_lg.png" alt="""="">
-
-
-
-
 					</a> <a href="ExitHomePageShow">退出</a>
 				</div>
 			</div>
@@ -87,10 +80,10 @@
 								<span class="dd">旧 密 码：</span> <input  type="password"><span id="oldMsg"></span>
 							</div>
 							<div class="form_group">
-								<span class="dd">新 密 码：</span> <input type="password" name="password">
+								<span class="dd">新 密 码：</span> <input id="regPsw" name="password" type="password" >
 							</div>
 							<div class="form_group">
-								<span class="dd">确认新密码：</span> <input id="regPswAgain" type="password"><span id="passMsg"></span>
+								<span class="dd">确认新密码：</span> <input id="regPswAgain" name="psw_again" type="password"><span id="passMsg"></span>
 							</div>
 							<div class="form_submit dd">
 								<input value="保　存" type="submit"> <a>取消</a>

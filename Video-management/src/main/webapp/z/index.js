@@ -209,7 +209,7 @@ function commitLogin(){
         var params=$("#loginForm").serialize();
        // alert(params);
         // post要小写
-        $.post("front/user/loginUser.action",params,function(data){
+        $.post("generalUserLogin",params,function(data){
         // alert(data);
                  if(data=='success'){
                       document.location.reload();
