@@ -55,7 +55,7 @@ public class UserMessageController {
 	public String UpdateUser(User user, String address1, HttpServletRequest req, HttpServletResponse resp) {
 		String local = LocalChina.local(user.getAddress(), address1);
 		user.setAddress(local);
-		service.update(user);
+		System.out.println(user);
 		req.setAttribute("list", user);
 		return "frontDesk/GeRenZhongXinZhanShi";
 	}

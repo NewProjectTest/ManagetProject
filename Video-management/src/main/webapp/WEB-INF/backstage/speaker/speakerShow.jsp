@@ -65,7 +65,6 @@ if(${msg} == 3){
 		<td>
 			<a class="btn btn-success" href="Uspeaker?id=${list[i].id }">（编辑）Success</a>
 
-			<a  class="btn btn-danger" href="">（删除）Danger</a>
 
 			<a  class="btn btn-danger" href="Dspeaker?id=${list[i].id }">（删除）Danger</a>
 

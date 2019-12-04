@@ -6,9 +6,7 @@
 
 <mapper namespace="com.zhiyou.mapper.AdminMapper">
 
-	<select id="login" resultType="admin">
-		select * from admin where accounts = #{accounts};
-	</select>
+	
 
 	<resultMap type="speaker" id="speaker">
 		<id column="id" property="id"/>
