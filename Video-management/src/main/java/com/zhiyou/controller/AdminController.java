@@ -41,6 +41,7 @@ public class AdminController {
 	public ModelAndView show(HttpServletRequest req, HttpServletResponse resp) {
 		// List<Speaker> list = service.videoShow();
 		ModelAndView model = new ModelAndView();
+		System.out.println(111);
 		model.addObject("list", service.videoShow());
 		model.setViewName("backstage/speaker/speakerShow");
 		return model;
