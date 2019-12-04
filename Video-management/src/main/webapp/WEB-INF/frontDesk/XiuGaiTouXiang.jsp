@@ -46,7 +46,7 @@
 
 				<div id="user_bar">
 					<a> <img id="avatar" src="z/avatar_lg.png" alt="""="">
-					</a> <a>退出</a>
+					</a> <a href="ExitHomePageShow">退出</a>
 				</div>
 			</div>
 		</menu>
@@ -61,7 +61,7 @@
 					<li class="profile_tab_line">|</li>
 					<li><a href="UpdateUserPhotoShow">更改头像</a></li>
 					<li class="profile_tab_line">|</li>
-					<li><a>密码安全</a></li>
+					<li><a href="UpdateUserPasswordShow">密码安全</a></li>
 				</ul>
 			</ul>
 			<div class="proflle_tab_body">

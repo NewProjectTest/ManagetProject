@@ -73,9 +73,4 @@ public class LoginController {
 		return "success";
 	}
 
-	@RequestMapping("adminLogin")
-	public String adminLogin() {
-
-		return "backstage/adminLogin";
-	}
 }

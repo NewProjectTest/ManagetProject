@@ -51,7 +51,7 @@
 
 
 
-					</a> <a>退出</a>
+					</a> <a href="ExitHomePageShow">退出</a>
 				</div>
 			</div>
 		</menu>
@@ -66,7 +66,7 @@
 				<li class="profile_tab_line">|</li>
 				<li><a>更改头像</a></li>
 				<li class="profile_tab_line">|</li>
-				<li><a>密码安全</a></li>
+				<li><a href="UpdateUserPasswordShow">密码安全</a></li>
 			</ul>
 			<div class="proflle_tab_body">
 				<div class="proflle_tab_workplace clearfix">
