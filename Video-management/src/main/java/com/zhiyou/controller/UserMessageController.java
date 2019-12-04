@@ -20,9 +20,23 @@ public class UserMessageController {
 	@Autowired
 	UserService service;
 
+	@RequestMapping(value = "UpdateUserPasswordShow")
+	public String UpdateUserPasswordShow(HttpServletRequest req, HttpServletResponse resp) {
+		System.out.println(123);
+		return "frontDesk/XiuGaiMiMa";
+	}
+
+	@RequestMapping(value = "UpdateUserPassword")
+	public String UpdateUserPassword(String password, HttpServletRequest req, HttpServletResponse resp) {
+		User user = (User) req.getSession().getAttribute("list");
+		user.setPassword(password);
+		req.setAttribute("list", user);
+		service.update(user);
+		return "frontDesk/GeRenZhongXinZhanShi";
+	}
+
 	@RequestMapping(value = "UpdateUserPhotoShow")
 	public String UpdateUserPhotoShow(HttpServletRequest req, HttpServletResponse resp) {
-
 		return "frontDesk/XiuGaiTouXiang";
 	}
 
@@ -38,7 +52,6 @@ public class UserMessageController {
 
 	@RequestMapping(value = "soloshow")
 	public String soloshow(HttpServletRequest req, HttpServletResponse resp) {
-
 		User User = (User) req.getSession().getAttribute("list");
 		req.setAttribute("list", User);
 		return "frontDesk/GeRenZhongXinZhanShi";
@@ -55,7 +68,6 @@ public class UserMessageController {
 	public String UpdateUser(User user, String address1, HttpServletRequest req, HttpServletResponse resp) {
 		String local = LocalChina.local(user.getAddress(), address1);
 		user.setAddress(local);
-		System.out.println(user);
 		req.setAttribute("list", user);
 		return "frontDesk/GeRenZhongXinZhanShi";
 	}

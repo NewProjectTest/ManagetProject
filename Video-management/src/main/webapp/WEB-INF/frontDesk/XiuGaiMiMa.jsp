@@ -52,7 +52,7 @@
 
 
 
-					</a> <a>退出</a>
+					</a> <a href="ExitHomePageShow">退出</a>
 				</div>
 			</div>
 		</menu>
@@ -67,7 +67,7 @@
 				<li class="profile_tab_line">|</li>
 				<li><a href="UpdateUserPhotoShow">更改头像</a></li>
 				<li class="profile_tab_line">|</li>
-				<li><a>密码安全</a></li>
+				<li><a href="UpdateUserPasswordShow">密码安全</a></li>
 			</ul>
 			<div class="proflle_tab_body">
 				<div class="proflle_tab_workplace clearfix">
@@ -82,17 +82,15 @@
 
 					</div>
 					<div class="profile_ifo_area">
-						<form action="" method="post">
+						<form action="UpdateUserPassword" method="post">
 							<div class="form_group">
-								<span class="dd">旧 密 码：</span> <input type="password"><span
-									id="oldMsg"></span>
+								<span class="dd">旧 密 码：</span> <input  type="password"><span id="oldMsg"></span>
 							</div>
 							<div class="form_group">
-								<span class="dd">新 密 码：</span> <input i type="password">
+								<span class="dd">新 密 码：</span> <input type="password" name="password">
 							</div>
 							<div class="form_group">
-								<span class="dd">确认新密码：</span> <input type="password"><span
-									id="passMsg"></span>
+								<span class="dd">确认新密码：</span> <input id="regPswAgain" type="password"><span id="passMsg"></span>
 							</div>
 							<div class="form_submit dd">
 								<input value="保　存" type="submit"> <a>取消</a>

@@ -62,7 +62,7 @@
 				<li class="profile_tab_line">|</li>
 				<li><a href="UpdateUserPhotoShow">更改头像</a></li>
 				<li class="profile_tab_line">|</li>
-				<li><a>密码安全</a></li>
+				<li><a href="UpdateUserPasswordShow">密码安全</a></li>
 			</ul>
 			<div class="proflle_tab_body">
 
