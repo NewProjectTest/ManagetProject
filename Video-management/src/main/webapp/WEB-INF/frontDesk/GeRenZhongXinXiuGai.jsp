@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+	<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <!DOCTYPE html>
 <!-- saved from url=(0044)http://localhost:8080/Voids/user/userShow.do -->
 <html>
@@ -71,8 +73,9 @@
 						<ul class="profile_ifo_area">
 							<li><span class="dd">昵 称：</span><input type="text" name="nickname" value="${list.nickname }"></li>
 							<li><span class="dd">性 别：</span>
-								<input type="radio" checked="checked" name="sex" value="男">男
-								<input type="radio" name="sex" value="女">女
+									<input type="radio" checked="checked" name="sex" value="男">男
+									<input type="radio" name="sex" value="女">女
+
 							</li>
 							<li><span class="dd">生 日：</span><input type="text" name="birthday" value="${list.birthday }"></li>
 							<li><span class="dd">邮 箱：</span><input type="text" name="accounts" readonly="readonly" value="${list.accounts }"></li>
