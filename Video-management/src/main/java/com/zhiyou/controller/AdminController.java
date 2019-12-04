@@ -19,6 +19,9 @@ public class AdminController {
 
 	@RequestMapping(value = "adminLogin")
 	public ModelAndView adminLogin(String accounts, String password, HttpServletRequest req, HttpServletResponse resp) {
+		
+		System.out.println(123);
+		System.out.println("admin");
 		Integer num = service.adminLogin(accounts, password, req);
 		ModelAndView model = new ModelAndView();
 		if (num == 1) {
