@@ -25,7 +25,7 @@ public class FTPUtil {
 			ftp.changeWorkingDirectory("/");
 			// 6:设置文件的类型
 			ftp.setFileType(FTPClient.BINARY_FILE_TYPE);
-			//ftp.setFileType(FTPClient.);
+			// ftp.setFileType(FTPClient.);
 			// 7:上传文件
 			ftp.storeFile(fileName, input);
 

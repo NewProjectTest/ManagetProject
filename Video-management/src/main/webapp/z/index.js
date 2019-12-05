@@ -128,6 +128,49 @@ $("#regEmail").blur(function(){
 
 });
 
+
+
+
+
+
+var yanzheng=false;
+function commitUpdatePw(){
+	var oldPassword =$("#oldPassword").val();
+	var pass01= $("#regPsw").val();
+    var pass02= $("#regPswAgain").val();
+	$.ajax({
+ 	    type:"POST",
+ 	    url:"yanZheng",
+ 	    data:{oldPassword:oldPassword},
+ 	  	success: function (data) {
+	 	  	 if(data=="success"){
+	        	 yanzheng=true;
+	            $("#oldMsg").text("密码正确").css("color","green");
+	         }else if(data=="false"){
+	        	 yanzheng=false;
+	             $("#oldMsg").text("密码错误").css("color","red");
+	         }
+ 	    }
+	});	
+	if(null==pass01 || ""==pass01 || null==pass02 || ""==pass02){
+        $("#passMsg").text("密码不能为空").css("color","red");
+        yanzheng =false;
+    }else if(pass01!=pass02){
+		 yanzheng=false;
+         $("#passMsg").text("两次密码输入不一致，请重新输入").css("color","red");
+     }else{
+    	 yanzheng=true;
+         $("#passMsg").text("");
+     }
+	 
+	return yanzheng;
+}
+
+
+
+
+
+
 $("#regPswAgain").blur(function(){
      var pass01= $("#regPsw").val();
       var pass02= $("#regPswAgain").val();
@@ -209,7 +252,7 @@ function commitLogin(){
         var params=$("#loginForm").serialize();
        // alert(params);
         // post要小写
-        $.post("front/user/loginUser.action",params,function(data){
+        $.post("generalUserLogin",params,function(data){
         // alert(data);
                  if(data=='success'){
                       document.location.reload();

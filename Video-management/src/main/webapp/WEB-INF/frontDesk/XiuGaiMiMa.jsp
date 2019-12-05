@@ -23,13 +23,10 @@
 <link rel="icon" href="z/favicon.png"
 	type="image/png">
 <title>在线公开课-智游教育|java|大数据|HTML5|python|UI|PHP视频教程</title>
-
+	
 </head>
 
 <body class="w100">
-
-
-
 
 	<header>
 		<div class="container top_bar clearfix">
@@ -47,11 +44,7 @@
 				</ul>
 
 				<div id="user_bar">
-					<a> <img id="avatar" src="z/avatar_lg.png" alt="""="">
-
-
-
-
+					<a> <img id="avatar" src="${list.imgurl }" alt="""="">
 					</a> <a href="ExitHomePageShow">退出</a>
 				</div>
 			</div>
@@ -82,15 +75,15 @@
 
 					</div>
 					<div class="profile_ifo_area">
-						<form action="UpdateUserPassword" method="post">
+						<form action="UpdateUserPassword" method="post" onsubmit="return commitUpdatePw()">
 							<div class="form_group">
-								<span class="dd">旧 密 码：</span> <input  type="password"><span id="oldMsg"></span>
+								<span class="dd">旧 密 码：</span> <input id="oldPassword" name="oldPassword" type="password" onblur="commitUpdatePw()"><span id="oldMsg"></span>
 							</div>
 							<div class="form_group">
-								<span class="dd">新 密 码：</span> <input type="password" name="password">
+								<span class="dd">新 密 码：</span> <input id="regPsw" name="password" type="password" >
 							</div>
 							<div class="form_group">
-								<span class="dd">确认新密码：</span> <input id="regPswAgain" type="password"><span id="passMsg"></span>
+								<span class="dd">确认新密码：</span> <input id="regPswAgain" name="psw_again" type="password"><span id="passMsg"></span>
 							</div>
 							<div class="form_submit dd">
 								<input value="保　存" type="submit"> <a>取消</a>
@@ -114,8 +107,10 @@
 				<li><img src="z/a.png" alt="" id="wxgzh"></li>
 			</ul>
 		</div>
-	</footer>
-
+	</footer> 
+	<script src="js/jquery-1.js"></script>
+	<script src="js/gVerify.js"></script>
+	<script src="z/index.js"></script>
 
 
 

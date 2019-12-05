@@ -78,7 +78,7 @@
 				<table cellspacing="10">
 					<tbody>
 						<tr>
-							<td colspan="2"><a> <img
+							<td colspan="2"><a href="WebCourseShow?number=1"> <img
 									src="z/html5.jpg"
 									alt="" class="image scale" draggable="false">
 									<div class="headline">
@@ -87,7 +87,7 @@
 									</div>
 							</a></td>
 							<td>
-								<!--上线时修改id--> <a> <img
+								<!--上线时修改id--> <a href="WebCourseShow?number=6"> <img
 									src="z/ui.jpg"
 									alt="" class="image scale" draggable="false">
 									<div class="headline">
@@ -111,7 +111,7 @@
 										<span>大数据教程</span> <img src="z/arrow.png" alt="">
 									</div>
 							</a></td>
-							<td colspan="2"><a> <img
+							<td colspan="2"><a href="WebCourseShow?number=10"> <img
 									src="z/python.jpg"
 									alt="" class="image scale" draggable="false">
 									<div class="headline">
@@ -120,7 +120,7 @@
 							</a></td>
 						</tr>
 						<tr>
-							<td colspan="2"><a> <img
+							<td colspan="2"><a href="WebCourseShow?number=11"> <img
 									src="z/php.jpg"
 									alt="" class="image scale" draggable="false">
 									<div class="headline">
