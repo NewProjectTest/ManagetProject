@@ -12,5 +12,5 @@ public class Course {
 	private String course_title;
 	private String course_desc;
 	private String subject_id;
-	
+	private Subject subject;
 }

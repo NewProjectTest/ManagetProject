@@ -109,7 +109,6 @@ th {
 
 	<script type="text/javascript">
 	function Delete(id){
-		alert(id);
 		var d = id;
 		  if (confirm("确定删除嘛?")) {
 			 

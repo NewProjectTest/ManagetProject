@@ -17,5 +17,7 @@ public class Video {
 	private String video_url;
 	private String image_url;
 	private Integer play_num;
-	
+	private Course course;
+	private Subject subject;
+	private Speaker speaker;
 }

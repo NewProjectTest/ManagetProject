@@ -7,10 +7,10 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Subject {
-    private Integer  subject_id;
-	private String subject_name;
-	
+public class D {
 
+	private Integer id;
+	private String url;
+	
 	
 }

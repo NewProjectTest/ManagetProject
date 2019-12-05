@@ -17,9 +17,33 @@
 <link href="http://libs.baidu.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet" />
 </head>
 <body>
-	<div class="jumbotron" style="padding-top: 15px; padding-bottom: 15px;">
+	<div class="jumbotron" >
 		<div class="container">
-			<h2>视频管理</h2>
+			<label>视频管理</label>
+			<div style="float: right;">
+			<form action="like" >
+				<input type="text" name="text"> 
+				
+			    <label >主讲人</label> 
+			    	<select name="sid" >
+								<option value="" selected="selected">请选择主讲人</option>
+							<c:forEach items="${slist }" var="list">
+								<option  value="${list.id}">${list.speaker_name }</option>
+							</c:forEach>
+						</select>
+					
+			  
+			
+			    <label >所属课程</label>
+			    	<select name="cid" >
+						<option value="" selected="selected">请选择课程</option>
+						<c:forEach items="${clist }" var="list">
+				    		<option value="${list.id}" >${list.course_title}</option>
+				  		</c:forEach>
+				 	 </select>		
+				<input type="submit" value="查询" > 
+			</form>
+			</div>
 		</div>
 	</div>
 	
@@ -31,7 +55,7 @@
 		<td>详情</td>
 		<td>时间</td>
 		<td>讲师名字</td>
-		<td>课程名字</td>
+		
 		<td>视频url</td>
 		<td>封面url</td>
 		<td>播放次数</td>
@@ -44,13 +68,13 @@
 		<td>${list[i].title }</td>
 		<td>${list[i].detail }</td>
 		<td>${list[i].time }</td>
-		<td>${list[i].speaker_id }</td>
-		<td>${list[i].course_id }</td>
+		<td>${list[i].speaker.speaker_name }</td>
+		
 		<td>${list[i].video_url}</td>
 		<td>${list[i].image_url }</td>
 		<td>${list[i].play_num }</td>
 		<td>
-			<a class="btn btn-success" href="Uvideo?id=${list[i].video_id }">（编辑）</a>
+			<a class="btn btn-success" href="videoA?id=${list[i].video_id }">（编辑）</a>
 			<a  class="btn btn-danger" href="Dvideo?id=${list[i].video_id }">（删除）</a>
 		</td>
 	</tr>
@@ -89,7 +113,7 @@
 			</c:if>
 		</div>
 
-<a class="btn btn-success" href="updateSpeaker">（添加）Add</a>
+<a class="btn btn-success" href="videoA" >（添加）Add</a>
 </div>	
 	
 	

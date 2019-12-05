@@ -46,7 +46,7 @@ public class AdminController {
 		ModelAndView model = new ModelAndView();
 		System.out.println(111);
 		model.addObject("list", service.videoShow());
-		model.setViewName("backstage/speaker/speakerShow");
+		model.setViewName("backstage/show");
 		return model;
 	}
 

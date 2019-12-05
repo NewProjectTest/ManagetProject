@@ -22,8 +22,6 @@ public class UserMessageController {
 
 	@RequestMapping(value = "UpdateUserPasswordShow")
 	public String UpdateUserPasswordShow(HttpServletRequest req, HttpServletResponse resp) {
-		System.out.println(123);
-		System.out.println("张");
 		return "frontDesk/XiuGaiMiMa";
 	}
 
@@ -43,6 +41,7 @@ public class UserMessageController {
 
 	@RequestMapping(value = "UpdateUserPhoto", method = RequestMethod.POST)
 	public String upload2(MultipartFile image_file, HttpServletRequest req, HttpServletResponse res) throws Exception {
+		
 		String string = FTPUtil.upload(image_file.getInputStream(), image_file.getOriginalFilename());
 		User user = (User) req.getSession().getAttribute("list");
 		user.setImgurl(string);
