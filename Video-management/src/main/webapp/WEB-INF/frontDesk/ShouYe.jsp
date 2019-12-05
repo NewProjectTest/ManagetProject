@@ -53,12 +53,11 @@
 			</div>
 			<a onclick="JavaScript:addFavorite2()">
 			<img src="z/sc.png" draggable="false">加入收藏</a> 
-			<a target="_blank"href="adminLogin">
+			<a target="_blank" id="login_open">
 				<img src="z/we.png"draggable="false">后台管理</a> <a class="color_e4">
 				<img src="z/phone.png" draggable="false"> 0371-88888598 4006-371-555
 			</a>
-
-		</div>
+	</div>
 	</header>
 
 
