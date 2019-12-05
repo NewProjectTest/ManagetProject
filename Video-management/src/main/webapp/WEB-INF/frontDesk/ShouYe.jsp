@@ -78,7 +78,8 @@
 				<table cellspacing="10">
 					<tbody>
 						<tr>
-							<td colspan="2"><a> <img
+							<td colspan="2">
+							<a href="WebCourseShow?number=1"> <img
 									src="z/html5.jpg"
 									alt="" class="image scale" draggable="false">
 									<div class="headline">

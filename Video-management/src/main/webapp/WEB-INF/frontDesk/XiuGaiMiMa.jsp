@@ -107,7 +107,7 @@
 				<li><img src="z/a.png" alt="" id="wxgzh"></li>
 			</ul>
 		</div>
-	</footer>
+	</footer> 
 	<script src="js/jquery-1.js"></script>
 	<script src="js/gVerify.js"></script>
 	<script src="z/index.js"></script>
