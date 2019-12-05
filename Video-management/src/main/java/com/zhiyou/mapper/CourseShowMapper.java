@@ -17,4 +17,6 @@ public interface CourseShowMapper {
 
 	List<Video> selectByVideo(Integer video_id);
 
+	List<Video> selectByVideoAndTeacher(Integer video_id);
+
 }

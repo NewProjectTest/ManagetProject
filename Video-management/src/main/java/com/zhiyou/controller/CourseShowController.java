@@ -46,6 +46,24 @@ public class CourseShowController {
 		req.setAttribute("detail", detail);
 		req.setAttribute("course_desc", course_desc);
 		req.setAttribute("video_url", video_url);
+
 		return "frontDesk/ShiPinBoFang";
 	}
+
+	@RequestMapping(value = "otherVideoCourseShow")
+	public String otherVideoCourseShow(Integer number, HttpServletRequest req, HttpServletResponse resp) {
+
+		List<Subject> subjectList = service.selectBySubject(number);
+		req.getSession().setAttribute("subjectList", subjectList.get(0));
+		List<Course> courseList = service.selectByCourse(number);
+		req.getSession().setAttribute("courseList", courseList);
+		for (int i = 0; i <= courseList.size() - 1; i++) {
+			List<Video> videoList = service.selectByVideo(Integer.valueOf(courseList.get(i).getId()));
+			courseList.get(i);
+			req.getSession().setAttribute("videoList" + i, videoList);
+		}
+
+		return "frontDesk/ShiPinBoFang";
+	}
+
 }

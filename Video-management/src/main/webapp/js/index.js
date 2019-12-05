@@ -39,7 +39,7 @@ $(window).scroll(function () {
             'border-bottom': 'none'
         });
     }
-});
+});login1
 // 登录注册显示和消失弹出框
 $('#reg_open').click(function () {
     $('#reg').removeClass('hidden');
@@ -52,6 +52,12 @@ $('#reg_close').click(function(){
 });
 $('#login_close').click(function(){
     $('#login').addClass('hidden');
+});
+$('#login1_open').click(function () {
+    $('#login1').removeClass('hidden');
+});
+$('#login1_close').click(function(){
+    $('#login1').addClass('hidden');
 });
 
 
