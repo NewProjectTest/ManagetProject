@@ -45,7 +45,7 @@
 				</ul>
 
 				<div id="user_bar">
-					<a> <img id="avatar" src="z/avatar_lg.png" alt="" width="30px;">
+					<a> <img id="avatar" src="${list.imgurl }" alt="" width="30px;">
 
 					</a> <a  href="ExitHomePageShow">退出</a>
 				</div>

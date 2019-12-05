@@ -30,8 +30,9 @@ public class UserServiceImpl implements UserService {
 		User user2 = null;
 		try {
 			user2 = mapper.selectByAccounts(account);
+
 		} catch (Exception e) {
-			// TODO: handle exception
+			e.printStackTrace();
 		}
 
 		if (user2 == null) {
@@ -50,8 +51,10 @@ public class UserServiceImpl implements UserService {
 
 	public boolean selectByAccounts(String account) {
 		// TODO Auto-generated method stub
+
 		User user2 = null;
 		try {
+			System.out.println(user2);
 			user2 = mapper.selectByAccounts(account);
 		} catch (Exception e) {
 			// TODO: handle exception

@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.zhiyou.model.User;
 import com.zhiyou.service.UserService;
+import com.zhiyou.uitl.MD5Util;
 
 @Controller
 public class LoginController {
@@ -32,21 +33,15 @@ public class LoginController {
 			throws IOException {
 		req.setCharacterEncoding("UTF-8");
 		String aString = null;
-		User user = service.selectByAccounts(accounts, req, password);
+		User user = service.selectByAccounts(accounts, req, MD5Util.getMD5String(password));
 		if (user == null) {
 			aString = "false";
 		} else {
 			aString = "success";
 		}
+		System.out.println(aString);
 		req.getSession().setAttribute("list", user);
 		return aString;
-	}
-
-	@ResponseBody
-	@RequestMapping("generalUserRegister")
-	public String generalUserRegister(User user, HttpServletRequest req, HttpServletResponse resp) {
-
-		return "success";
 	}
 
 	@ResponseBody
@@ -69,9 +64,10 @@ public class LoginController {
 	@RequestMapping("insertUser")
 	public String insertUser(User user, HttpServletRequest req, HttpServletResponse resp) {
 		user.setImgurl("z/avatar_lg.png");
+		String password = user.getPassword();
+		user.setPassword(MD5Util.getMD5String(password));
 		service.add(user);
 		return "success";
 	}
-
 
 }
